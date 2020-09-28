@@ -8,22 +8,22 @@ def house_when_player_hits(): # house hit chart is dependent on the player's thi
         if house.hand == 7:
             house.bonus = True
         check_hands()
-    elif house.hand == 3 and player.hit != 8: # if house hand is 3, and players third card is anything but eight, house hits
+    elif house.hand == 3 and player.hit != 8: # if house's hand is 3, and player's third card is anything but eight, house hits
         print("House hits draws", house.draw())
         if house.hand == 7:
             house.bonus = True
         check_hands()
-    elif house.hand == 4 and 1 < player.hit < 8:  # if house hand is 4, and players third card values from 2-7, house hits
+    elif house.hand == 4 and 1 < player.hit < 8:  # if house's hand is 4, and player's third card is 2-7, house hits
         print("House hits draws", house.draw())
         if house.hand == 7:
             house.bonus = True
         check_hands()
-    elif house.hand == 5 and 3 < player.hit < 8: # # if house hand is 5, and players third card values from 4-7, house hits
+    elif house.hand == 5 and 3 < player.hit < 8: # # if house's hand is 5, and player's third card is 4-7, house hits
         print("House hits draws", house.draw())
         if house.hand == 7:
             house.bonus = True
         check_hands()
-    elif house.hand == 6 and (house.hit == 6 or house.hit == 7): # if house hand is 6, and players third card values from 6 or 7, house hits
+    elif house.hand == 6 and (house.hit == 6 or house.hit == 7): # if house's hand is 6, and player's third card is 6 or 7, house hits
         print("House hits draws", house.draw())
         if house.hand == 7:
             house.bonus = True
