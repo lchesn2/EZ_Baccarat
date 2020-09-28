@@ -18,7 +18,6 @@ class Hand:
         self.hand = 0
         self.natural = False
         self.turn = False
-        self.hit = False
         self.three_cards = False
         self.bonus = False
 
