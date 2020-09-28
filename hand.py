@@ -98,7 +98,7 @@ class Player(Hand):
     def place_base_bet(self):
         if self.bank < 5:
             print("You lost all your money! Better luck next time.")
-            exit(-1)  # is exit -1 enough to exit whole program?
+            exit(-1)  
         get_base_bet = True
         while get_base_bet:
             print("You have $", player.bank)
