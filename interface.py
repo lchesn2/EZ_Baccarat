@@ -2,33 +2,33 @@ import hand
 from hand import Hand, player, house
 
 
-def house_when_player_hits():
-    if 0 <= house.hand < 3:
+def house_when_player_hits(): # house hit chart is dependent on the player's third card
+    if 0 <= house.hand < 3: # if house hand is 0,1, or 2 house will always hit
         print("House hits draws", house.draw())
         if house.hand == 7:
             house.bonus = True
         check_hands()
-    elif house.hand == 3 and player.hit != 8:
+    elif house.hand == 3 and player.hit != 8: # if house hand is 3, and players third card is anything but eight, house hits
         print("House hits draws", house.draw())
         if house.hand == 7:
             house.bonus = True
         check_hands()
-    elif house.hand == 4 and 1 < player.hit < 8:  # hits on 2-7
+    elif house.hand == 4 and 1 < player.hit < 8:  # if house hand is 4, and players third card values from 2-7, house hits
         print("House hits draws", house.draw())
         if house.hand == 7:
             house.bonus = True
         check_hands()
-    elif house.hand == 5 and 3 < player.hit < 8:
+    elif house.hand == 5 and 3 < player.hit < 8: # # if house hand is 5, and players third card values from 4-7, house hits
         print("House hits draws", house.draw())
         if house.hand == 7:
             house.bonus = True
         check_hands()
-    elif house.hand == 6 and (house.hit == 6 or house.hit == 7):
+    elif house.hand == 6 and (house.hit == 6 or house.hit == 7): # if house hand is 6, and players third card values from 6 or 7, house hits
         print("House hits draws", house.draw())
         if house.hand == 7:
             house.bonus = True
         check_hands()
-    else:
+    else: # house's hand is seven, doesn't hit
         check_hands()
 
 
